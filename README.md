@@ -99,25 +99,6 @@ ticket_classifier_outputs.zip  ← Everything above bundled for download
 | IT Volume by category.png  | Bar chart showing the total number of IT tickets per category, highlighting category-wise volume    |
 | Category Distribution.png  | Bar chart showing the distribution of IT tickets across all 8 categories                            |
 
-🔍 Live Inference:
-->Classify an IT service ticket → category + confidence
-->Single IT Ticket Prediction
-.Enter IT ticket description:requesting for meeting requesting meeting hi please help follow equipments cable pc cord plug
-.Predicted IT Category: Hardware
-
-#Returns:
-#Prediction Probabilities
-#{
-#"Access":"0.61%"
-#"Administrative rights":"0.92%"
-#"HR Support":"1.09%"
-#"Hardware":"95.27%"
-#"Internal Project":"0.28%"
-#"Miscellaneous":"0.60%"
-#"Purchase":"0.71%"
-#"Storage":"0.52%"
-#}
-
 🚀 Quick Start:
 #1. Clone the repo
 git clone https://github.com/YOUR_USERNAME/support-ticket-classifier.git
