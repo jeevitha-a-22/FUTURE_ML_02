@@ -16,6 +16,7 @@ Dataset Details:
 | Dataset                                 | Rows   | Columns | Target                                |
 | --------------------------------------- | ------ | ------- | ------------------------------------- |
 | `all_tickets_processed_improved_v3.csv` | 47,837 | 2       | IT Ticket Category (8 classes)        |
+
 IT Categories: Hardware · HR Support · Access · Miscellaneous · Storage · Purchase · Internal Project · Administrative Rights
 Priority Levels: 🔴 High · 🟡 Medium · 🟢 Low
 
@@ -32,12 +33,14 @@ Priority Levels: 🔴 High · 🟡 Medium · 🟢 Low
 | **Export**        | pickle, zipfile                                                                |
 
 🧹 Text Preprocessing Pipeline:
-Clean Text — remove URLs, emails, numbers, placeholders
-Tokenize — split sentences into words using NLTK
-Filter Stopwords — standard NLTK stopwords + domain-specific words
-Lemmatize / Stem — normalize words for better feature representation
-Vectorize — TF-IDF representation for ML models
-Predict — classify tickets & calculate confidence scores
+| Step | Stage            | Description                                                             |
+| ---- | ---------------- | ----------------------------------------------------------------------- |
+| 1    | Clean Text       | Remove URLs, emails, numbers, and placeholders from raw ticket text     |
+| 2    | Tokenize         | Split sentences into individual words using NLTK                        |
+| 3    | Filter Stopwords | Remove common NLTK stopwords + domain-specific irrelevant words         |
+| 4    | Lemmatize / Stem | Normalize words to their base/root form for better feature consistency  |
+| 5    | Vectorize        | Convert text into numerical features using TF-IDF                       |
+| 6    | Predict          | Classify tickets and generate confidence scores using trained ML models |
 
 📈 Model Performance:
 | Model                 | Accuracy | Precision | Recall | Weighted F1 |
@@ -80,7 +83,7 @@ ticket_classifier_outputs.zip  ← Everything above bundled for download
 | 8    | Evaluation                   | `classification_report` for both tasks; styled confusion matrices with % annotations  |
 | 9    | Cross-Validation             | 5-fold `StratifiedKFold` on a pipeline; fill-between confidence bands plotted         |
 | 10   | Feature Importance           | Logistic Regression coefficients → top 10 TF-IDF terms per category (2×4 grid)        |
-| 11   | Live Inference               | `classify_it_ticket()` with top-3 confidence scores                                   |
+| 11   | Live Inference               | classifies IT Ticket with category and prediction probability scores                  |
 | 12   | Executive Dashboard          | 4 KPI cards + category bars + CV plot + per-class F1 heatmap in one figure            |
 | 13   | Save & Download              | Pickle all models + vectorizers + label encoders → ZIP download                       |
 
@@ -96,11 +99,12 @@ ticket_classifier_outputs.zip  ← Everything above bundled for download
 | Category Distribution.png  | Bar chart showing the distribution of IT tickets across all 8 categories                            |
 
 🔍 Live Inference:
-# Classify an IT service ticket → category + confidence
+#Classify an IT service ticket → category + confidence
 ->Single IT Ticket Prediction
 Enter IT ticket description:requesting for meeting requesting meeting hi please help follow equipments cable pc cord plug
 Predicted IT Category: Hardware
-# Returns:
+
+#Returns:
 #Prediction Probabilities
 #{
 #"Access":"0.61%"
@@ -114,14 +118,14 @@ Predicted IT Category: Hardware
 #}
 
 🚀 Quick Start:
-# 1. Clone the repo
+#1. Clone the repo
 git clone https://github.com/YOUR_USERNAME/support-ticket-classifier.git
 cd support-ticket-classifier
 
-# 2. Install dependencies
+#2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Launch notebook
+#3. Launch notebook
 jupyter notebook support_ticket_classifier.ipynb
 
 📄 License
