@@ -1,3 +1,4 @@
+streamlit
 numpy
 pandas
 matplotlib
@@ -6,6 +7,4 @@ scikit-learn
 nltk
 wordcloud
 scipy
-streamlit
-jupyter
-
+plotly
