@@ -1,0 +1,5 @@
+Task,Model,Accuracy,Weighted_F1
+IT Category,Logistic Regression,0.8506,0.8504
+IT Category,Linear SVM,0.8485,0.8484
+IT Category,Random Forest,0.8374,0.8374
+IT Category,Naive Bayes,0.7720,0.7682
