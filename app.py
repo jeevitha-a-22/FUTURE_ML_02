@@ -181,4 +181,4 @@ with tab2:
         st.subheader("Per-Category F1 Heatmap")
         plt.figure(figsize=(8,4))
         sns.heatmap(metrics_df_it.set_index('Model')[['Weighted_F1']], annot=True, cmap='RdYlGn', fmt=".2f")
-        st.pyplot(fig)
+        st.pyplot(plt.gcf())
