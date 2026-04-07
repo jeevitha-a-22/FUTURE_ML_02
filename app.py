@@ -29,13 +29,13 @@ with open('saved_models/le_it.pkl', 'rb') as f:
 
 # Load dataset for dashboard
 try:
-    df = pd.read_csv('it_tickets.csv')
+    df = pd.read_csv('data/all_tickets_processed_improved_v3.csv')
 except FileNotFoundError:
     df = pd.DataFrame(columns=['Ticket_Description', 'Topic_group'])
 
 # Load model metrics for dashboard
 try:
-    metrics_df_it = pd.read_csv('model_metrics_it.csv')
+    metrics_df_it = pd.read_csv('data/model_metrics_it.csv')
 except FileNotFoundError:
     metrics_df_it = pd.DataFrame(columns=['Task','Model','Accuracy','Weighted_F1'])
 
