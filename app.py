@@ -34,6 +34,7 @@ except FileNotFoundError:
     df = pd.DataFrame(columns=['Ticket_Description', 'Topic_group'])
 
 # Load model metrics for dashboard
+metrics_df_it = metrics_df_it[metrics_df_it['Task'] == 'IT Category']
 try:
     metrics_df_it = pd.read_csv('data/model_metrics_it.csv')
 except FileNotFoundError:
@@ -181,4 +182,4 @@ with tab2:
         st.subheader("Per-Category F1 Heatmap")
         plt.figure(figsize=(8,4))
         sns.heatmap(metrics_df_it.set_index('Model')[['Weighted_F1']], annot=True, cmap='RdYlGn', fmt=".2f")
-        st.pyplot(plt.gcf())
+        st.pyplot(fig)
