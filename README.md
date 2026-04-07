@@ -54,7 +54,7 @@ Priority Levels: 🔴 High · 🟡 Medium · 🟢 Low
 support-ticket-classifier/
 │
 ├── 📓 support_ticket_classifier.ipynb   ← Full notebook (13 steps)
-│
+├── app.py
 ├── 📊 outputs/
 │   ├── IT_dashboard.png                 
 │   ├── Wordclouds.png                  
