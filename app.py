@@ -36,7 +36,7 @@ except FileNotFoundError:
 # Load model metrics for dashboard
 try:
     metrics_df_it = pd.read_csv('data/model_metrics_it.csv')
-     st.write("Loaded metrics:", metrics_df_it.head())
+    st.write("Loaded metrics:", metrics_df_it.head())
 
     # Convert safely
     if 'Weighted_F1' in metrics_df_it.columns:
