@@ -1,4 +1,4 @@
-🎫**IT Support Ticket Classification & Prioritization:**
+# 🎫IT Support Ticket Classification & Prioritization:
 A complete end-to-end machine learning solution for automatically classifying IT service tickets into 8 categories and predicting priority levels for customer support requests using Python, NLP, and Machine Learning.
 
 🔍 Project Summary:
@@ -100,10 +100,10 @@ ticket_classifier_outputs.zip  ← Everything above bundled for download
 | Category Distribution.png  | Bar chart showing the distribution of IT tickets across all 8 categories                            |
 
 🔍 Live Inference:
-# Classify an IT service ticket → category + confidence
+->Classify an IT service ticket → category + confidence
 ->Single IT Ticket Prediction
-Enter IT ticket description:requesting for meeting requesting meeting hi please help follow equipments cable pc cord plug
-Predicted IT Category: Hardware
+.Enter IT ticket description:requesting for meeting requesting meeting hi please help follow equipments cable pc cord plug
+.Predicted IT Category: Hardware
 
 #Returns:
 #Prediction Probabilities
