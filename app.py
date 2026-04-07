@@ -34,9 +34,14 @@ except FileNotFoundError:
     df = pd.DataFrame(columns=['Ticket_Description', 'Topic_group'])
 
 # Load model metrics for dashboard
-metrics_df_it = metrics_df_it[metrics_df_it['Task'] == 'IT Category']
 try:
     metrics_df_it = pd.read_csv('data/model_metrics_it.csv')
+     st.write("Loaded metrics:", metrics_df_it.head())
+
+    # Convert safely
+    if 'Weighted_F1' in metrics_df_it.columns:
+        metrics_df_it['Weighted_F1'] = metrics_df_it['Weighted_F1'].astype(float)
+
 except FileNotFoundError:
     metrics_df_it = pd.DataFrame(columns=['Task','Model','Accuracy','Weighted_F1'])
 
