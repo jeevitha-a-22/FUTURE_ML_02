@@ -51,30 +51,22 @@ Priority Levels: 🔴 High · 🟡 Medium · 🟢 Low
 | Naive Bayes           | 0.7720   | 0.8031    | 0.7720 | 0.7682      |
 
 
-support-ticket-classification/
+support-ticket-classifier/
 │
-├── support_ticket_classifier.ipynb      # Full notebook
+├── 📓 support_ticket_classifier.ipynb   ← Full notebook (13 steps)
 │
-├── outputs/                             # Generated visualizations
-│   ├── IT_dashboard.png
-│   ├── Wordcloud.png
-│   ├── confusion_matrix_it.png
-│   ├── Model_comparison(1).png
-│   ├── IT Ticket length distribution.png
-│   ├── Ticket Category Distribution.png
-│   ├── IT Ticket Volume by category.png
+├── 📊 outputs/
+│   ├── IT_dashboard.png                 
+│   ├── Wordclouds.png                  
+│   ├── confusion_matrix_it.png        
+│   ├── Model_comparison(1).png          
+│   ├── IT Ticket Vloume by category.png        
+│   ├── IT Ticket length distribution.png       
+│   └── Ticket Category distribution.png             
 │
-├── saved_models/                        # Pickled models & encoders
-│   ├── tfidf_it.pkl                     # TF-IDF vectorizer (15K features)
-│   ├── model_it_cat.pkl                 # Best model (Logistic Regression)
-│   ├── le_it.pkl                        # LabelEncoder (8 categories)
-│
-├── model_metrics.csv                    # Model performance summary
-├── ticket_classifier_outputs.zip        # All outputs bundled
-│
-├── README.md
-├── requirements.txt
-
+├── 📄 README.md
+├── 📄 requirements.txt
+└── 📄 .gitignore
 
 model_metrics.csv              ← All model scores in one CSV
 ticket_classifier_outputs.zip  ← Everything above bundled for download
