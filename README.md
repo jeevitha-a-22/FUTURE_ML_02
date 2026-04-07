@@ -50,23 +50,31 @@ Priority Levels: 🔴 High · 🟡 Medium · 🟢 Low
 | Random Forest         | 0.8374   | 0.8422    | 0.8374 | 0.8374      |
 | Naive Bayes           | 0.7720   | 0.8031    | 0.7720 | 0.7682      |
 
-Support-ticket-classifier/prioritization:
-├── support_ticket_classifier.ipynb   # Full notebook 
-├── outputs/                          # Generated visualizations
-│   ├── IT_dashboard.png
-│   ├── Wordcloud.png
-│   ├── confusion_matrix_it.png
-│   ├── Model_comparison(1).png
-│   ├── IT Ticket length distribution.png
-│   ├── Ticket Category Distribution.png
-│   ├── IT Ticket Vloume by category.png
-├── saved_models/            # Pickled models, vectorizers, label encoders
-    ├── tfidf_it.pkl         ← TF-IDF vectorizer for IT tickets   (15K features)
-    ├── model_it_cat.pkl     ← Best IT category classifier (Logistic Regression)
-    ├── le_it.pkl            ← LabelEncoder for 8 IT categories                     
+
+support-ticket-classification/
+│
+├── support_ticket_classifier.ipynb         # Full notebook
+│
+│   ├── outputs/                            # Generated visualizations
+│   │   ├── IT_dashboard.png
+│   │   ├── Wordcloud.png
+│   │   ├── confusion_matrix_it.png
+│   │   ├── Model_comparison(1).png
+│   │   ├── IT Ticket length distribution.png
+│   │   ├── Ticket Category Distribution.png
+│   │   ├── IT Ticket Volume by category.png
+│
+│   ├── saved_models/                       # Pickled models & encoders
+│   │   ├── tfidf_it.pkl                    # TF-IDF vectorizer (15K features)
+│   │   ├── model_it_cat.pkl                # Best model (Logistic Regression)
+│   │   ├── le_it.pkl                       # LabelEncoder (8 categories)
+│
+│   ├── model_metrics.csv                   # Model performance summary
+│   ├── ticket_classifier_outputs.zip       # All outputs bundled
+│
 ├── README.md
 ├── requirements.txt
-└── .gitignore
+
 model_metrics.csv              ← All model scores in one CSV
 ticket_classifier_outputs.zip  ← Everything above bundled for download
 
